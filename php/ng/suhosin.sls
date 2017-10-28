@@ -4,7 +4,7 @@ include:
   - php.ng
   - php.ng.dev
 
-{% set phpng_version = salt['pillar.get']('php:ng:version', '7.0')|string %}
+{% set phpng_version = salt['pillar.get']('php:ng:version', '5.6')|string %}
 
 {% if salt['grains.get']('os') == "Ubuntu" %}
   {% if phpng_version >= '7.0' %}
