@@ -102,8 +102,8 @@
                                 ('hhvm.repo.central.path', '/var/run/hhvm/hhvm.hhbc'),
                             ]),
                             'php': odict([
-                                ('session.save_handler', 'files'),
-                                ('session.save_path', '/var/lib/hhvm/sessions'),
+                                ('session.save_handler', 'memcache'),
+                                ('session.save_path', 'tcp://192.168.0.18:11211'),
                                 ('session.gc_maxlifetime', '1440'),
                                 ('hhvm.log.level', 'Warning'),
                                 ('hhvm.log.always_log_unhandled_exceptions', 'true'),
@@ -284,7 +284,8 @@
                             'bcmath.scale': 0
                         },
                         'Session': {
-                            'session.save_handler': 'files',
+                            'session.save_handler': 'memcache', 
+                            'session.save_path' = 'tcp://192.168.0.18:11211',
                             'session.use_strict_mode': 0,
                             'session.use_cookies': 1,
                             'session.use_only_cookies': 1,
@@ -606,7 +607,8 @@
                             'bcmath.scale': 0
                         },
                         'Session': {
-                            'session.save_handler': 'files',
+                            'session.save_handler': 'memcache', 
+                            'session.save_path' = 'tcp://192.168.0.18:11211',
                             'session.use_strict_mode': 0,
                             'session.use_cookies': 1,
                             'session.use_only_cookies': 1,
@@ -972,7 +974,8 @@
                             'bcmath.scale': 0
                         },
                         'Session': {
-                            'session.save_handler': 'files',
+                            'session.save_handler': 'memcache', 
+                            'session.save_path' = 'tcp://192.168.0.18:11211',
                             'session.use_strict_mode': 0,
                             'session.use_cookies': 1,
                             'session.use_only_cookies': 1,
@@ -1358,7 +1361,8 @@
                             'bcmath.scale': 0
                         },
                         'Session': {
-                            'session.save_handler': 'files',
+                            'session.save_handler': 'memcache', 
+                            'session.save_path' = 'tcp://192.168.0.18:11211',
                             'session.use_strict_mode': 0,
                             'session.use_cookies': 1,
                             'session.use_only_cookies': 1,
@@ -1687,7 +1691,8 @@
                             'bcmath.scale': 0
                         },
                         'Session': {
-                            'session.save_handler': 'files',
+                            'session.save_handler': 'memcache', 
+                            'session.save_path' = 'tcp://192.168.0.18:11211',
                             'session.use_strict_mode': 0,
                             'session.use_cookies': 1,
                             'session.use_only_cookies': 1,
@@ -2237,7 +2242,8 @@
                     'bcmath.scale': 0
                 },
                 'Session': {
-                    'session.save_handler': 'files',
+                    'session.save_handler': 'memcache', 
+                    'session.save_path' = 'tcp://192.168.0.18:11211',
                     'session.use_strict_mode': 0,
                     'session.use_cookies': 1,
                     'session.use_only_cookies': 1,
