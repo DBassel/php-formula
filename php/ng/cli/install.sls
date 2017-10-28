@@ -3,7 +3,7 @@
 
 {%- if salt['grains.get']('os_family') == "Debian" %}
 {% set current_php = salt['alternatives.show_current']('php') %}
-{% set phpng_version = salt['pillar.get']('php:ng:version', '7.0')|string %}
+{% set phpng_version = salt['pillar.get']('php:ng:version', '5.6')|string %}
 
 php_{{ phpng_version }}_link:
   alternatives.set:
