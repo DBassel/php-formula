@@ -2,7 +2,7 @@
 # vim: ft=jinja
 
 {%- if salt['grains.get']('os') == "Ubuntu" %}
-    {%- set use_external_repo = salt['pillar.get']('php:use_external_repo', False) %}
+    {%- set use_external_repo = salt['pillar.get']('php:use_external_repo', True) %}
     {%- if use_external_repo %}
         {%- set php_version = salt['pillar.get']('php:version', '5.6')|string %}
         {%- if salt['grains.get']('osrelease')|string >= '16.04' %}
